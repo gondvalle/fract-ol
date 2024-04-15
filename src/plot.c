@@ -23,7 +23,7 @@ void	plot_start(t_fractal *fractal)
 {
 	fractal->mlx_conect = mlx_init();
 	if (!fractal->mlx_conect)
-		return (ft_putstr_fd("Error\n", 2), exit(EXIT_FAILURE));
+		return (mlx_error(fractal), exit(EXIT_FAILURE));
 	fractal->mlx_open = mlx_new_window(fractal->mlx_conect, WIDTH,
 			HEIGHT, fractal->name);
 	if (!fractal->mlx_conect)
