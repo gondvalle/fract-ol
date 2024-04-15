@@ -25,5 +25,6 @@ int	main(int argn, char **argv)
 	else
 		return (ft_putstr_fd("Error\n", 2), 0);
 	plot_start(&fractal);
-	
+	plot_render(&fractal);
+	mlx_loop(fractal.mlx_conect);
 }
